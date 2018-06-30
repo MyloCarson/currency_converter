@@ -2,9 +2,9 @@ let cacheName = "currency-cache-v2";
 let cacheFiles = [
     '/',
     '/main',
-    '/main/index.html',
+    '/index.html',
     '/sw',
-    '/sw/index.js',
+    'index.js',
     '/sw/sw.js',
     'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css',
     'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js',
