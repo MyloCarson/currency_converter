@@ -1,0 +1,14 @@
+{
+  "name": "currency_converter",
+  "version": "1.0.0",
+  "description": "A pwa application that converts currencies",
+  "main": "/main/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "idb": "^2.1.3"
+  }
+}
