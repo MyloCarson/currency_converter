@@ -102,30 +102,36 @@ let addToSelects  = ()=>{
     }
  }
 
-let  convertCurrency = ()=> {
+let  convertCurrency = (amount)=> {
     
     let firstCurrency = firstCurrency_Select.value;
     let secondCurrency = secondCurrency_Select.value;
-    let amount = amonutInput.value;
+    console.log(secondCurrency_Select.selectedIndex);
+    // let amount = amonutInput.value;
 
     let indexInResponse = `${firstCurrency}_${secondCurrency}`;
     
     fetch(`${base_url}/convert?q=${firstCurrency}_${secondCurrency}&compact=y`)
         .then((response)=>{
             response.json().then(function(data){
-                console.log(data);
-                resultDiv.innerText = data[indexInResponse].val * amount;
+                let res = data[indexInResponse].val * amount;
+                resultDiv.innerText
+                 = `${listOfCountries[secondCurrency_Select.selectedIndex].currencySymbol}  ${res}`;
             })
-            
         })
         .catch((err)=>{
             console.log("[Error] Couldn't convert", err);
         })
-
 };
 
 $('#convert').click(() => {
-    convertCurrency();
+    let amount = amonutInput.value;
+    if(amount === "" || amount=== 0){
+        alert('Provide a valid amount');
+    }else{
+        convertCurrency(amount);
+    }
+    
 });
 
 
