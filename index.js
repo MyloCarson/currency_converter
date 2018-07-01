@@ -114,7 +114,7 @@ let  convertCurrency = (amount)=> {
     fetch(`${base_url}/convert?q=${firstCurrency}_${secondCurrency}&compact=y`)
         .then((response)=>{
             response.json().then(function(data){
-                let res = data[indexInResponse].val * amount;
+                let res = data[indexInResponse].val  * amount;
                 resultDiv.innerText
                  = `${listOfCountries[secondCurrency_Select.selectedIndex].currencySymbol}  ${res}`;
             })
