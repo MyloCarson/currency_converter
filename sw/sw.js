@@ -1,4 +1,4 @@
-let cacheName = "currency-cache-v3";
+let cacheName = "currency-cache-v4";
 let cacheFiles = [
     '/',
     '/main',
